@@ -1,0 +1,34 @@
+---
+title: Publish/Subscribe
+description: RabbitMQ Publish/Subscribe tutorial using Python
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import ReceiveLogsCode from '!!raw-loader!../../generated/tutorial3/receive_logs.py';
+import EmitLogCode from '!!raw-loader!../../generated/tutorial3/emit_log.py';
+
+# Publish/Subscribe
+
+In this tutorial, we demonstrate the Publish/Subscribe messaging pattern using RabbitMQ and Python.
+
+A publisher sends messages to an exchange, and multiple receivers can receive those messages through their own queues.
+
+## Receiver
+
+The receiver subscribes to the fanout exchange and receives messages published to it.
+
+### receive_logs.py
+
+<CodeBlock language="python" showLineNumbers>
+{ReceiveLogsCode}
+</CodeBlock>
+
+## Publisher
+
+The publisher sends messages to the fanout exchange. RabbitMQ distributes messages to all queues bound to that exchange.
+
+### emit_log.py
+
+<CodeBlock language="python" showLineNumbers>
+{EmitLogCode}
+</CodeBlock>

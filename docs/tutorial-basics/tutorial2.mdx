@@ -1,0 +1,28 @@
+---
+title: Work Queues
+description: RabbitMQ Work Queues tutorial using Python
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import ProducerCode from '!!raw-loader!../../generated/tutorial2/new_task.py';
+import WorkerCode from '!!raw-loader!../../generated/tutorial2/worker.py';
+
+## Producer
+
+The producer creates tasks and publishes them to the `task_queue`.
+
+### new_task.py
+
+<CodeBlock language="python" showLineNumbers>
+{ProducerCode}
+</CodeBlock>
+
+## Worker
+
+The worker receives tasks from the queue and processes them.
+
+### worker.py
+
+<CodeBlock language="python" showLineNumbers>
+{WorkerCode}
+</CodeBlock>
